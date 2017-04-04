@@ -1,18 +1,37 @@
 @charset "UTF-8";
-body {
-  background-color: aqua;
+.border_style {
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
 }
-.content {
-  background-color: red;
-  height: 200px;
-  width: 200px;
-  border: 1px solid #fff;
+#content {
+  background-color: blanchedalmond;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  height: 100px;
+  width: 100px;
 }
 .list {
+  margin-left: 300px;
+  width: 100px;
   background-color: antiquewhite;
-  border: 5px solid green;
+  border: 1px solid green;
+}
+.list li:hover {
+  color: red;
 }
 .box {
-  background-color: cyan;
   height: 100px;
+  width: 100px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #ff0000 transparent;
+  background-color: azure;
+}
+.math {
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  border: 1px solid green;
 }

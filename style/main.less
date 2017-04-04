@@ -1,25 +1,78 @@
 @charset "UTF-8";
-body{
-  background-color: aqua;
-}
-.content{
-  background-color: red;
-  height: 200px;
-  width: 200px;
-  border: 1px solid #fff;
-}
-.list{
-  background-color: antiquewhite;
-  border: 5px solid green;
+
+@body_color: yellow;
+
+body {
+  //background-color: @body_color;
 }
 
-@box_height: 100px;
+.border_box(@box_height:100px ,@box_width: 100px){
+  height: @box_height;
+  width: @box_width;
+}
+
+.border_style{
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+}
+
+#content{
+  background-color: blanchedalmond;
+  //border: 1px solid green;
+  .border_style;
+  .border_box();
+}
+
+.list{
+  margin-left: 300px;
+  width: 100px;
+  background-color: antiquewhite;
+  border: 1px solid green;
+  //li {
+  //  &:hover {
+  //    color: red;
+  //  }
+  //}
+  li:hover{
+    color: red;
+  }
+}
+
+.border_match(top,@boxWidth: 5px, @boxColor: red){
+  border-width: @boxWidth;
+  border-color: @boxColor transparent transparent transparent;
+}
+
+.border_match(bottom,@boxWidth: 5px, @boxColor: red){
+  border-width: @boxWidth;
+  border-style: solid;
+  border-color: transparent transparent @boxColor transparent;
+}
+
+.border_match(left,@boxWidth: 5px, @boxColor: red){
+  border-width: @boxWidth;
+  border-style: solid;
+  border-color: transparent transparent transparent @boxColor;
+}
+
+.border_match(right,@boxWidth: 5px, @boxColor: red){
+  border-width: @boxWidth;
+  border-style: solid;
+  border-color: transparent @boxColor transparent transparent;
+}
 
 .box{
-  background-color: cyan;
-  height: @box_height;
+  .border_box();
+  .border_match(bottom);
+  background-color: azure;
 }
 
-.border(@width: 50px){
-  width: @width;
+@mathWidth: 50px;
+
+.math{
+  margin-top: 20px;
+  width: @mathWidth+100;
+  height: 50px;
+  border: 1px solid green;
 }
