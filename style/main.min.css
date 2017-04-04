@@ -1,0 +1,5 @@
+@charset "UTF-8";
+body{background-color:#0ff}
+.content{background-color:red;height:200px;width:200px;border:1px solid #fff}
+.list{background-color:#faebd7;border:5px solid green}
+.box{background-color:#0ff;height:100px}
